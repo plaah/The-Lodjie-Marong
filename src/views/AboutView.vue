@@ -66,26 +66,17 @@
             </div>
           </div>
         </div>
-        <div class="md:col-span-8 h-[400px] bg-sage-wash reveal delay-200 overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-700">
-          <img
-            src="/images/gallery-4.svg"
-            alt="Map location visualization"
-            class="w-full h-full object-cover opacity-60"
+        <div class="md:col-span-8 h-[400px] bg-sage-wash reveal delay-200 overflow-hidden relative rounded-lg shadow-lg">
+          <iframe
+            src="https://maps.google.com/maps?q=The+Lodjie+Marong+Wonosobo&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            width="100%"
+            height="100%"
+            style="border:0; filter: grayscale(100%) contrast(1.1) opacity(0.85);"
+            allowfullscreen=""
             loading="lazy"
-          />
-          <div class="absolute inset-0 flex items-center justify-center">
-            <a
-              href="https://maps.google.com/?q=The+Lodjie+Marong+Wonosobo"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="p-6 bg-cream shadow-xl flex items-center gap-4 hover:shadow-2xl transition-all"
-            >
-              <svg class="w-6 h-6 text-deep-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-              </svg>
-              <span class="font-label text-label text-deep-forest uppercase tracking-widest">{{ locale.t.common.mapsCta }}</span>
-            </a>
-          </div>
+            referrerpolicy="no-referrer-when-downgrade"
+            title="The Lodjie Marong location"
+          ></iframe>
         </div>
       </div>
     </section>
