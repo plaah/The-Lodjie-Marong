@@ -8,6 +8,7 @@
       </transition>
     </router-view>
     <Footer />
+    <ChatWidget />
   </div>
 </template>
 
@@ -15,6 +16,7 @@
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
 import LoadingScreen from './components/LoadingScreen.vue'
+import ChatWidget from './components/ChatWidget.vue'
 </script>
 
 <style>
