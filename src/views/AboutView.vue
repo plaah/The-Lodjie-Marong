@@ -15,7 +15,7 @@
         <div class="md:col-span-6 md:col-start-7 relative reveal delay-200">
           <div class="aspect-[4/5] bg-sage-wash overflow-hidden">
             <img
-              src="/images/gallery-2.jpg"
+              src="/images/gallery-2.svg"
               alt="The Lodjie Marong heritage hall"
               class="w-full h-full object-cover"
               loading="lazy"
@@ -68,7 +68,7 @@
         </div>
         <div class="md:col-span-8 h-[400px] bg-sage-wash reveal delay-200 overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-700">
           <img
-            src="/images/gallery-4.jpg"
+            src="/images/gallery-4.svg"
             alt="Map location visualization"
             class="w-full h-full object-cover opacity-60"
             loading="lazy"

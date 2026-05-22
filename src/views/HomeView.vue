@@ -39,9 +39,9 @@ const { t } = useLocaleStore()
 useScrollReveal()
 
 const galleryItems = computed(() => [
-  { image: '/images/gallery-1.jpg', alt: t.home.galleryItems.garden, label: t.home.galleryItems.garden },
-  { image: '/images/gallery-2.jpg', alt: t.home.galleryItems.hall, label: t.home.galleryItems.hall },
-  { image: '/images/gallery-3.jpg', alt: t.home.galleryItems.bridal, label: t.home.galleryItems.bridal },
-  { image: '/images/gallery-4.jpg', alt: t.home.galleryItems.lawn, label: t.home.galleryItems.lawn }
+  { image: '/images/gallery-1.svg', alt: t.home.galleryItems.garden, label: t.home.galleryItems.garden },
+  { image: '/images/gallery-2.svg', alt: t.home.galleryItems.hall, label: t.home.galleryItems.hall },
+  { image: '/images/gallery-3.svg', alt: t.home.galleryItems.bridal, label: t.home.galleryItems.bridal },
+  { image: '/images/gallery-4.svg', alt: t.home.galleryItems.lawn, label: t.home.galleryItems.lawn }
 ])
 </script>

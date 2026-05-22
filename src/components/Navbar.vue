@@ -29,6 +29,7 @@
 
       <button
         @click="mobileMenuOpen = !mobileMenuOpen"
+        :aria-expanded="mobileMenuOpen"
         class="md:hidden text-deep-forest p-2"
         aria-label="Toggle menu"
       >

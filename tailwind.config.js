@@ -13,10 +13,12 @@ export default {
         'sage-wash': '#E9EDDE',
         'on-surface': '#1b1c1a',
         'on-surface-variant': '#434842',
+        'on-primary-container': '#E9EDDE',
       },
       fontFamily: {
         'headline': ['EB Garamond', 'serif'],
         'body': ['Inter', 'sans-serif'],
+        'label': ['Inter', 'sans-serif'],
       },
       fontSize: {
         'display': ['64px', { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '400' }],

@@ -44,7 +44,7 @@
                 </svg>
                 <div>
                   <p class="font-label text-label text-deep-forest uppercase">{{ t.contact.contactInfo.hours }}</p>
-                  <p class="text-body font-light whitespace-pre-line">{{ t.about.locationHours }}</p>
+                  <p class="text-body font-light whitespace-pre-line">{{ t.contact.contactInfo.hours }}</p>
                 </div>
               </div>
             </div>

@@ -107,7 +107,7 @@ const isSubmitting = ref(false)
 const submitStatus = ref(null)
 
 function validateField(field) {
-  delete errors[field]
+  errors[field] = undefined
 
   if (field === 'name' && !form.name.trim()) {
     errors.name = t.contact.form.required

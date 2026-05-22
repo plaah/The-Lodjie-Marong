@@ -38,10 +38,10 @@
           v-for="i in 6"
           :key="i"
           class="aspect-[4/3] bg-sage-wash overflow-hidden reveal"
-          :class="`delay-${(i % 3 + 1) * 100}`"
+          :style="{ transitionDelay: `${(i % 3 + 1) * 0.1}s` }"
         >
           <img
-            :src="`/images/gallery-${((i - 1) % 4) + 1}.jpg`"
+            :src="`/images/gallery-${((i - 1) % 4) + 1}.svg`"
             :alt="`Event photo ${i}`"
             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
             loading="lazy"

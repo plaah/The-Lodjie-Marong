@@ -4,7 +4,7 @@
     <p class="text-body font-light opacity-80 mb-2">{{ description }}</p>
     <p class="text-label text-warm-stone uppercase tracking-widest mb-8">{{ capacity }}</p>
     <ul class="space-y-3 font-label text-[10px] tracking-widest uppercase opacity-60">
-      <li v-for="(feature, index) in features" :key="index">{{ feature }}</li>
+      <li v-for="(feature, index) in features" :key="`${name}-${index}`">{{ feature }}</li>
     </ul>
     <div class="mt-8">
       <WhatsAppButton :label="ctaText" />

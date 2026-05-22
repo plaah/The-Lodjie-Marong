@@ -7,9 +7,9 @@
     <div class="flex overflow-x-auto gap-8 px-margin-x-mobile md:px-margin-x custom-scrollbar pb-10">
       <div
         v-for="(item, index) in items"
-        :key="index"
+        :key="item.image"
         class="flex-shrink-0 w-[350px] md:w-[400px] h-[500px] md:h-[550px] bg-white p-4 reveal"
-        :class="`delay-${(index + 1) * 100}`"
+        :style="{ transitionDelay: `${(index + 1) * 0.1}s` }"
       >
         <img
           :src="item.image"
