@@ -144,7 +144,17 @@ async function handleSubmit() {
   submitStatus.value = null
 
   try {
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    const message = `Halo, saya tertarik dengan The Lodjie Marong.
+
+Nama: ${form.name}
+Email: ${form.email}
+Telepon: ${form.phone}
+Tanggal Acara: ${form.date || 'Belum ditentukan'}
+Pesan: ${form.message || '-'}`
+
+    const whatsappUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
+
     submitStatus.value = 'success'
     form.name = ''
     form.email = ''
