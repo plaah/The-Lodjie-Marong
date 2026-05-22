@@ -1,0 +1,138 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "events": "Acara",
+    "contact": "Kontak",
+    "enquire": "Pesan Sekarang"
+  },
+  "home": {
+    "heroSubtitle": "Warisan Sancktuary • Wonosobo",
+    "heroTitle": "Di Mana Warisan Bertemu Keanggunan Modern",
+    "heroCta": "Jelajahi Venue",
+    "galleryTitle": "Kanvas untuk Cerita Abadi",
+    "gallerySubtitle": "Dari janji manis di taman hingga perayaan megah di aula warisan kami, setiap sudut The Lodjie Marong dikurasi untuk keindahan yang tak terlupakan.",
+    "galleryItems": {
+      "garden": "Taman Terrace",
+      "hall": "Aula Warisan",
+      "bridal": "Suite Pengantin",
+      "lawn": "Halaman Utara"
+    },
+    "valueTitle": "Mengapa The Lodjie Marong?",
+    "valueDescription": "Terletak di jantung Wonosobo, kami menawarkan perpaduan sempurna antara keindahan alam, warisan arsitektur, dan pelayanan premium untuk hari paling istimewa Anda.",
+    "valueCta": "Pelajari Lebih Lanjut"
+  },
+  "about": {
+    "subtitle": "Warisan Kami",
+    "title": "Sanctuary Kemewahan yang Tenang",
+    "story": "Didirikan atas prinsip warisan dan keramahan, The Lodjie Marong mewakili jiwa arsitektur Wonosobo. Apa yang dimulai sebagai tempat peristirahatan keluarga pribadi telah berkembang menjadi tujuan utama bagi mereka yang mencari venue pernikahan dengan bobot sejarah dan keanggunan alami.",
+    "quote": "Kami percaya kemewahan ditemukan dalam bisikan sejarah dan napas taman, bukan hanya kemegahan arsitektur.",
+    "historyCta": "Sejarah Lengkap Kami",
+    "facilitiesTitle": "Fasilitas Kami",
+    "facilities": {
+      "garden": {
+        "title": "Taman Pernikahan",
+        "description": "Taman hijau luas dengan pemandangan alam Wonosobo yang memukau"
+      },
+      "hall": {
+        "title": "Aula Warisan",
+        "description": "Ruang elegan berkapasitas hingga 300 tamu dengan arsitektur tradisional"
+      },
+      "bridal": {
+        "title": "Suite Pengantin",
+        "description": "Ruang persiapan eksklusif untuk pengantin dan rombongan"
+      },
+      "parking": {
+        "title": "Area Parkir Luas",
+        "description": "Parkir memadai untuk tamu dengan akses mudah ke venue"
+      },
+      "catering": {
+        "title": "Dapur Katering",
+        "description": "Fasilitas dapur profesional untuk katering pilihan Anda"
+      },
+      "sound": {
+        "title": "Sistem Audio",
+        "description": "Sound system profesional untuk musik dan acara"
+      }
+    },
+    "locationTitle": "Lokasi Kami",
+    "locationAddress": "Wonosobo, Jawa Tengah, Indonesia",
+    "locationHours": "Senin - Sabtu: 09:00 - 17:00\nMinggu dengan perjanjian",
+    "locationLabel": "Alamat",
+    "hoursLabel": "Jam Kunjungan"
+  },
+  "events": {
+    "subtitle": "Perayaan",
+    "title": "Perjalanan Pernikahan",
+    "packages": {
+      "intimate": {
+        "name": "Intimate",
+        "description": "Dikurasi untuk pertemuan hingga 40 tamu. Sempurna bagi Anda yang mengutamakan koneksi mendalam.",
+        "capacity": "Hingga 40 tamu",
+        "features": [
+          "Akses Taman Privat",
+          "Menu Kuliner Spesial",
+          "Suite Warisan"
+        ],
+        "cta": "Tanya Admin"
+      },
+      "signature": {
+        "name": "Signature",
+        "description": "Paket klasik kami untuk hingga 150 tamu. Esensi pengalaman The Lodjie Marong.",
+        "capacity": "Hingga 150 tamu",
+        "features": [
+          "Akses Aula & Taman Penuh",
+          "Makan Estate Multi-Kursus",
+          "Dukungan Desain Floral"
+        ],
+        "cta": "Tanya Admin"
+      },
+      "estate": {
+        "name": "Estate",
+        "description": "Sewa estate eksklusif 3 hari untuk hingga 300 tamu. Imersi penuh ke dalam kemewahan warisan.",
+        "capacity": "Hingga 300 tamu",
+        "features": [
+          "Eksklusivitas Seluruh Area",
+          "Tim Perencanaan Concierge",
+          "Akomodasi Tamu"
+        ],
+        "cta": "Tanya Admin"
+      }
+    },
+    "galleryTitle": "Galeri Acara",
+    "gallerySubtitle": "Momen-momen indah yang telah tercipta di The Lodjie Marong",
+    "cta": "Pesan Sekarang"
+  },
+  "contact": {
+    "title": "Mulai Cerita Warisan Anda",
+    "form": {
+      "name": "Nama Lengkap",
+      "email": "Email",
+      "phone": "Nomor Telepon",
+      "date": "Tanggal Acara",
+      "message": "Pesan",
+      "submit": "Kirim Pesan",
+      "submitting": "Mengirim...",
+      "success": "Pesan Anda berhasil dikirim! Kami akan segera menghubungi Anda.",
+      "error": "Terjadi kesalahan. Silakan coba lagi.",
+      "required": "Wajib diisi",
+      "invalidEmail": "Format email tidak valid",
+      "invalidPhone": "Format telepon tidak valid"
+    },
+    "whatsapp": "Chat via WhatsApp",
+    "contactInfo": {
+      "title": "Informasi Kontak",
+      "phone": "Telepon",
+      "email": "Email",
+      "hours": "Jam Kerja"
+    }
+  },
+  "footer": {
+    "description": "Sanctuary warisan yang didedikasikan untuk seni perayaan abadi. Terletak di jantung Wonosobo, melestarikan keanggunan masa lalu untuk cerita masa depan.",
+    "copyright": "© 2026 The Lodjie Marong. Sanctuary Warisan di Wonosobo."
+  },
+  "common": {
+    "language": "EN",
+    "mapsCta": "Temukan di Google Maps"
+  }
+}

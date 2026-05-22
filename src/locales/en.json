@@ -1,0 +1,138 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "events": "Events",
+    "contact": "Contact",
+    "enquire": "Enquire Now"
+  },
+  "home": {
+    "heroSubtitle": "Heritage Sanctuary • Wonosobo",
+    "heroTitle": "Where Legacy Meets Modern Grace",
+    "heroCta": "Discover the Grounds",
+    "galleryTitle": "A Canvas for Timeless Stories",
+    "gallerySubtitle": "From intimate garden vows to grand celebrations in our heritage hall, every corner of The Lodjie Marong is curated for effortless beauty.",
+    "galleryItems": {
+      "garden": "The Garden Terrace",
+      "hall": "Heritage Hall",
+      "bridal": "The Bridal Suite",
+      "lawn": "The North Lawns"
+    },
+    "valueTitle": "Why The Lodjie Marong?",
+    "valueDescription": "Nestled in the heart of Wonosobo, we offer the perfect blend of natural beauty, architectural heritage, and premium service for your most special day.",
+    "valueCta": "Learn More"
+  },
+  "about": {
+    "subtitle": "Our Legacy",
+    "title": "A Sanctuary of Quiet Luxury",
+    "story": "Founded on the principles of heritage and hospitality, The Lodjie Marong represents the architectural soul of Wonosobo. What began as a private family retreat has evolved into a premier destination for those seeking a wedding venue with historical weight and natural grace.",
+    "quote": "We believe luxury is found in the whispers of history and the breath of the garden, not just the grandeur of the architecture.",
+    "historyCta": "Our Full History",
+    "facilitiesTitle": "Our Facilities",
+    "facilities": {
+      "garden": {
+        "title": "Wedding Garden",
+        "description": "Expansive green garden with stunning views of Wonosobo's natural landscape"
+      },
+      "hall": {
+        "title": "Heritage Hall",
+        "description": "Elegant space accommodating up to 300 guests with traditional architecture"
+      },
+      "bridal": {
+        "title": "Bridal Suite",
+        "description": "Exclusive preparation room for the bride and entourage"
+      },
+      "parking": {
+        "title": "Spacious Parking",
+        "description": "Ample parking for guests with easy venue access"
+      },
+      "catering": {
+        "title": "Catering Kitchen",
+        "description": "Professional kitchen facilities for your chosen caterer"
+      },
+      "sound": {
+        "title": "Audio System",
+        "description": "Professional sound system for music and events"
+      }
+    },
+    "locationTitle": "Our Location",
+    "locationAddress": "Wonosobo, Central Java, Indonesia",
+    "locationHours": "Monday - Saturday: 09:00 - 17:00\nSunday by appointment",
+    "locationLabel": "Address",
+    "hoursLabel": "Viewing Hours"
+  },
+  "events": {
+    "subtitle": "Celebrations",
+    "title": "The Wedding Journey",
+    "packages": {
+      "intimate": {
+        "name": "The Intimate",
+        "description": "Curated for gatherings of up to 40 guests. Perfect for those who value profound connection over ceremony.",
+        "capacity": "Up to 40 guests",
+        "features": [
+          "Private Garden Access",
+          "Bespoke Culinary Pairing",
+          "Heritage Suite"
+        ],
+        "cta": "Ask Admin"
+      },
+      "signature": {
+        "name": "The Signature",
+        "description": "Our classic package for up to 150 guests. The quintessence of The Lodjie Marong experience.",
+        "capacity": "Up to 150 guests",
+        "features": [
+          "Full Hall & Lawn Access",
+          "Multi-Course Estate Dining",
+          "Floral Design Support"
+        ],
+        "cta": "Ask Admin"
+      },
+      "estate": {
+        "name": "The Estate",
+        "description": "Exclusive 3-day estate hire for up to 300 guests. A full immersion into heritage luxury.",
+        "capacity": "Up to 300 guests",
+        "features": [
+          "Full Grounds Exclusivity",
+          "Concierge Planning Team",
+          "Guest Accommodation"
+        ],
+        "cta": "Ask Admin"
+      }
+    },
+    "galleryTitle": "Event Gallery",
+    "gallerySubtitle": "Beautiful moments created at The Lodjie Marong",
+    "cta": "Book Now"
+  },
+  "contact": {
+    "title": "Begin Your Heritage Tale",
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone Number",
+      "date": "Event Date",
+      "message": "Message",
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "success": "Your message has been sent! We will contact you shortly.",
+      "error": "An error occurred. Please try again.",
+      "required": "Required field",
+      "invalidEmail": "Invalid email format",
+      "invalidPhone": "Invalid phone format"
+    },
+    "whatsapp": "Chat via WhatsApp",
+    "contactInfo": {
+      "title": "Contact Information",
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Working Hours"
+    }
+  },
+  "footer": {
+    "description": "A heritage sanctuary dedicated to the art of timeless celebration. Nestled in the heart of Wonosobo, preserving the grace of the past for the stories of the future.",
+    "copyright": "© 2026 The Lodjie Marong. A Heritage Sanctuary in Wonosobo."
+  },
+  "common": {
+    "language": "ID",
+    "mapsCta": "Find Us on Google Maps"
+  }
+}
