@@ -5,7 +5,7 @@
         The Lodjie Marong
       </h2>
       <p class="text-body text-cream/70 max-w-lg mb-12">
-        {{ t.footer.description }}
+        {{ locale.t.footer.description }}
       </p>
       <div class="flex gap-8 mb-12">
         <a href="#" aria-label="Instagram" class="text-body text-cream/70 hover:text-cream transition-colors">Instagram</a>
@@ -13,7 +13,7 @@
         <a href="#" aria-label="Pinterest" class="text-body text-cream/70 hover:text-cream transition-colors">Pinterest</a>
       </div>
       <div class="text-body text-cream/50 border-t border-cream/10 pt-12 w-full">
-        {{ t.footer.copyright }}
+        {{ locale.t.footer.copyright }}
       </div>
     </div>
   </footer>
@@ -22,5 +22,5 @@
 <script setup>
 import { useLocaleStore } from '../stores/locale'
 
-const { t } = useLocaleStore()
+const locale = useLocaleStore()
 </script>

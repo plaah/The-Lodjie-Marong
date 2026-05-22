@@ -2,7 +2,7 @@
   <form @submit.prevent="handleSubmit" class="space-y-6" novalidate>
     <div>
       <label :for="nameId" class="block text-label text-deep-forest uppercase tracking-widest mb-2">
-        {{ t.contact.form.name }} <span class="text-red-500">*</span>
+        {{ locale.t.contact.form.name }} <span class="text-red-500">*</span>
       </label>
       <input
         :id="nameId"
@@ -17,7 +17,7 @@
 
     <div>
       <label :for="emailId" class="block text-label text-deep-forest uppercase tracking-widest mb-2">
-        {{ t.contact.form.email }} <span class="text-red-500">*</span>
+        {{ locale.t.contact.form.email }} <span class="text-red-500">*</span>
       </label>
       <input
         :id="emailId"
@@ -32,7 +32,7 @@
 
     <div>
       <label :for="phoneId" class="block text-label text-deep-forest uppercase tracking-widest mb-2">
-        {{ t.contact.form.phone }} <span class="text-red-500">*</span>
+        {{ locale.t.contact.form.phone }} <span class="text-red-500">*</span>
       </label>
       <input
         :id="phoneId"
@@ -47,7 +47,7 @@
 
     <div>
       <label :for="dateId" class="block text-label text-deep-forest uppercase tracking-widest mb-2">
-        {{ t.contact.form.date }}
+        {{ locale.t.contact.form.date }}
       </label>
       <input
         :id="dateId"
@@ -59,7 +59,7 @@
 
     <div>
       <label :for="messageId" class="block text-label text-deep-forest uppercase tracking-widest mb-2">
-        {{ t.contact.form.message }}
+        {{ locale.t.contact.form.message }}
       </label>
       <textarea
         :id="messageId"
@@ -70,7 +70,7 @@
     </div>
 
     <div v-if="submitStatus" :class="['p-4 text-center font-body', submitStatus === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800']">
-      {{ submitStatus === 'success' ? t.contact.form.success : t.contact.form.error }}
+      {{ submitStatus === 'success' ? locale.t.contact.form.success : locale.t.contact.form.error }}
     </div>
 
     <button
@@ -78,7 +78,7 @@
       :disabled="isSubmitting"
       class="w-full px-10 py-4 bg-deep-forest text-cream font-label text-label tracking-[0.2em] uppercase hover:bg-opacity-90 transition-all active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
     >
-      {{ isSubmitting ? t.contact.form.submitting : t.contact.form.submit }}
+      {{ isSubmitting ? locale.t.contact.form.submitting : locale.t.contact.form.submit }}
     </button>
   </form>
 </template>
@@ -87,7 +87,7 @@
 import { ref, reactive } from 'vue'
 import { useLocaleStore } from '../stores/locale'
 
-const { t } = useLocaleStore()
+const locale = useLocaleStore()
 const nameId = `name-${Math.random().toString(36).slice(2)}`
 const emailId = `email-${Math.random().toString(36).slice(2)}`
 const phoneId = `phone-${Math.random().toString(36).slice(2)}`
@@ -110,22 +110,22 @@ function validateField(field) {
   errors[field] = undefined
 
   if (field === 'name' && !form.name.trim()) {
-    errors.name = t.contact.form.required
+    errors.name = locale.t.contact.form.required
   }
 
   if (field === 'email') {
     if (!form.email.trim()) {
-      errors.email = t.contact.form.required
+      errors.email = locale.t.contact.form.required
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
-      errors.email = t.contact.form.invalidEmail
+      errors.email = locale.t.contact.form.invalidEmail
     }
   }
 
   if (field === 'phone') {
     if (!form.phone.trim()) {
-      errors.phone = t.contact.form.required
+      errors.phone = locale.t.contact.form.required
     } else if (!/^[\d\s\-\+\(\)]{8,}$/.test(form.phone)) {
-      errors.phone = t.contact.form.invalidPhone
+      errors.phone = locale.t.contact.form.invalidPhone
     }
   }
 }
