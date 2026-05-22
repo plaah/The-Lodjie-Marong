@@ -71,7 +71,7 @@
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.7795320435102!2d109.95482360000001!3d-7.3785882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a9fcff731d669%3A0xd61785579ddbe424!2sThe%20Lodjie%20Marong!5e0!3m2!1sen!2smy!4v1779478991208!5m2!1sen!2smy"
             width="100%"
             height="100%"
-            style="border:0; filter: grayscale(100%) contrast(1.1) opacity(0.85);"
+            style="border:0;"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
