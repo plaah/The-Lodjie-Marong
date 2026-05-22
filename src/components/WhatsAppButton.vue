@@ -15,7 +15,7 @@
 <script setup>
 const props = defineProps({
   label: { type: String, default: 'Chat via WhatsApp' },
-  phone: { type: String, default: '6281234567890' },
+  phone: { type: String, default: '6282223115231' },
   message: { type: String, default: 'Halo, saya tertarik dengan The Lodjie Marong. Bisa info lebih lanjut?' }
 })
 

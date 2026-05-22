@@ -152,7 +152,7 @@ Telepon: ${form.phone}
 Tanggal Acara: ${form.date || 'Belum ditentukan'}
 Pesan: ${form.message || '-'}`
 
-    const whatsappUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`
+    const whatsappUrl = `https://wa.me/6282223115231?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
 
     submitStatus.value = 'success'

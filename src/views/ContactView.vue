@@ -13,7 +13,7 @@
         <div class="space-y-10 reveal delay-200">
           <WhatsAppButton
             :label="locale.t.contact.whatsapp"
-            phone="6281234567890"
+            phone="6282223115231"
             message="Halo, saya tertarik dengan The Lodjie Marong. Bisa info lebih lanjut?"
           />
 
