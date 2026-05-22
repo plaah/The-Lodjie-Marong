@@ -3,9 +3,14 @@
     <nav class="flex justify-between items-center px-margin-x-mobile md:px-margin-x max-w-container mx-auto h-full">
       <router-link
         to="/"
-        class="font-headline text-xl text-deep-forest tracking-widest uppercase"
+        class="flex items-center"
       >
-        The Lodjie Marong
+        <img
+          src="/images/logo.png"
+          alt="The Lodjie Marong"
+          class="h-12 w-auto"
+          style="filter: brightness(0) saturate(100%) invert(15%) sepia(20%) saturate(500%) hue-rotate(90deg);"
+        />
       </router-link>
 
       <div class="hidden md:flex gap-10 items-center">

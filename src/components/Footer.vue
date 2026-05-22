@@ -1,9 +1,12 @@
 <template>
   <footer class="bg-deep-forest w-full py-20 px-margin-x-mobile md:px-margin-x text-cream">
     <div class="flex flex-col items-center text-center max-w-container mx-auto">
-      <h2 class="font-headline text-3xl text-cream mb-4 uppercase tracking-[0.4em]">
-        The Lodjie Marong
-      </h2>
+      <img
+        src="/images/logo.png"
+        alt="The Lodjie Marong"
+        class="h-16 w-auto mb-4"
+        style="filter: brightness(0) saturate(100%) invert(95%) sepia(5%) saturate(200%) hue-rotate(90deg);"
+      />
       <p class="text-body text-cream/70 max-w-lg mb-12">
         {{ locale.t.footer.description }}
       </p>
