@@ -1,5 +1,10 @@
 # AGENTS.md — The Lodjie Marong
 
+## Init
+
+**ALWAYS** load the `karpathy-guidelines` skill at session start before any coding work.
+This skill enforces: think before coding, simplicity first, surgical changes, goal-driven execution.
+
 ## Project
 
 Vue 3 + Vite + Tailwind CSS landing page for a wedding venue in Wonosobo, Indonesia.
