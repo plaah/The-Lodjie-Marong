@@ -16,13 +16,13 @@
           class="text-label font-label text-on-surface-variant hover:text-deep-forest transition-colors uppercase tracking-widest"
           :class="{ 'text-deep-forest border-b-2 border-deep-forest pb-1': isActive(item.path) }"
         >
-          {{ locale.t.nav[item.key] }}
+          {{ t.nav[item.key] }}
         </router-link>
         <router-link
           to="/contact"
           class="ml-4 px-6 py-2 bg-deep-forest text-cream font-label text-[10px] tracking-[0.2em] uppercase hover:bg-opacity-90 transition-all active:scale-95"
         >
-          {{ locale.t.nav.enquire }}
+          {{ t.nav.enquire }}
         </router-link>
         <LanguageToggle />
       </div>
@@ -55,7 +55,7 @@
           class="text-label font-label text-on-surface-variant hover:text-deep-forest transition-colors uppercase tracking-widest py-2"
           :class="{ 'text-deep-forest': isActive(item.path) }"
         >
-          {{ locale.t.nav[item.key] }}
+          {{ t.nav[item.key] }}
         </router-link>
         <LanguageToggle />
       </div>
@@ -70,7 +70,7 @@ import { useLocaleStore } from '../stores/locale'
 import LanguageToggle from './LanguageToggle.vue'
 
 const route = useRoute()
-const locale = useLocaleStore()
+const { t } = useLocaleStore()
 const mobileMenuOpen = ref(false)
 
 const navItems = [

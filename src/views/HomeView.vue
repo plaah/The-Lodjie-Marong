@@ -1,28 +1,28 @@
 <template>
   <main>
     <HeroSection
-      :subtitle="locale.t.home.heroSubtitle"
-      :title="locale.t.home.heroTitle"
-      :cta-text="locale.t.home.heroCta"
+      :subtitle="t.home.heroSubtitle"
+      :title="t.home.heroTitle"
+      :cta-text="t.home.heroCta"
       cta-link="/about"
     />
 
     <GallerySection
-      :title="locale.t.home.galleryTitle"
-      :subtitle="locale.t.home.gallerySubtitle"
+      :title="t.home.galleryTitle"
+      :subtitle="t.home.gallerySubtitle"
       :items="galleryItems"
     />
 
     <section class="py-section px-margin-x-mobile md:px-margin-x max-w-container mx-auto text-center reveal">
-      <h2 class="font-headline text-headline text-deep-forest mb-6">{{ locale.t.home.valueTitle }}</h2>
+      <h2 class="font-headline text-headline text-deep-forest mb-6">{{ t.home.valueTitle }}</h2>
       <p class="text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10 font-light">
-        {{ locale.t.home.valueDescription }}
+        {{ t.home.valueDescription }}
       </p>
       <router-link
         to="/about"
         class="inline-block px-10 py-4 border-2 border-deep-forest text-deep-forest font-label text-label tracking-[0.2em] uppercase hover:bg-deep-forest hover:text-cream transition-all"
       >
-        {{ locale.t.home.valueCta }}
+        {{ t.home.valueCta }}
       </router-link>
     </section>
   </main>
@@ -35,13 +35,13 @@ import { useScrollReveal } from '../composables/useScrollReveal'
 import HeroSection from '../components/HeroSection.vue'
 import GallerySection from '../components/GallerySection.vue'
 
-const locale = useLocaleStore()
+const { t } = useLocaleStore()
 useScrollReveal()
 
 const galleryItems = computed(() => [
-  { image: '/images/gallery-1.svg', alt: locale.t.home.galleryItems.garden, label: locale.t.home.galleryItems.garden },
-  { image: '/images/gallery-2.svg', alt: locale.t.home.galleryItems.hall, label: locale.t.home.galleryItems.hall },
-  { image: '/images/gallery-3.svg', alt: locale.t.home.galleryItems.bridal, label: locale.t.home.galleryItems.bridal },
-  { image: '/images/gallery-4.svg', alt: locale.t.home.galleryItems.lawn, label: locale.t.home.galleryItems.lawn }
+  { image: '/images/gallery-1.svg', alt: t.home.galleryItems.garden, label: t.home.galleryItems.garden },
+  { image: '/images/gallery-2.svg', alt: t.home.galleryItems.hall, label: t.home.galleryItems.hall },
+  { image: '/images/gallery-3.svg', alt: t.home.galleryItems.bridal, label: t.home.galleryItems.bridal },
+  { image: '/images/gallery-4.svg', alt: t.home.galleryItems.lawn, label: t.home.galleryItems.lawn }
 ])
 </script>

@@ -1,37 +1,37 @@
 <template>
   <main class="pt-20">
     <section class="py-section bg-deep-forest text-cream px-margin-x-mobile md:px-margin-x max-w-container mx-auto text-center">
-      <span class="font-label text-label text-on-primary-container mb-4 block uppercase">{{ locale.t.events.subtitle }}</span>
-      <h2 class="font-headline text-headline mb-16">{{ locale.t.events.title }}</h2>
+      <span class="font-label text-label text-on-primary-container mb-4 block uppercase">{{ t.events.subtitle }}</span>
+      <h2 class="font-headline text-headline mb-16">{{ t.events.title }}</h2>
       <div class="grid md:grid-cols-3 gap-12 text-left">
         <PackageCard
-          :name="locale.t.events.packages.intimate.name"
-          :description="locale.t.events.packages.intimate.description"
-          :capacity="locale.t.events.packages.intimate.capacity"
-          :features="locale.t.events.packages.intimate.features"
-          :cta-text="locale.t.events.packages.intimate.cta"
+          :name="t.events.packages.intimate.name"
+          :description="t.events.packages.intimate.description"
+          :capacity="t.events.packages.intimate.capacity"
+          :features="t.events.packages.intimate.features"
+          :cta-text="t.events.packages.intimate.cta"
         />
         <PackageCard
-          :name="locale.t.events.packages.signature.name"
-          :description="locale.t.events.packages.signature.description"
-          :capacity="locale.t.events.packages.signature.capacity"
-          :features="locale.t.events.packages.signature.features"
-          :cta-text="locale.t.events.packages.signature.cta"
+          :name="t.events.packages.signature.name"
+          :description="t.events.packages.signature.description"
+          :capacity="t.events.packages.signature.capacity"
+          :features="t.events.packages.signature.features"
+          :cta-text="t.events.packages.signature.cta"
         />
         <PackageCard
-          :name="locale.t.events.packages.estate.name"
-          :description="locale.t.events.packages.estate.description"
-          :capacity="locale.t.events.packages.estate.capacity"
-          :features="locale.t.events.packages.estate.features"
-          :cta-text="locale.t.events.packages.estate.cta"
+          :name="t.events.packages.estate.name"
+          :description="t.events.packages.estate.description"
+          :capacity="t.events.packages.estate.capacity"
+          :features="t.events.packages.estate.features"
+          :cta-text="t.events.packages.estate.cta"
         />
       </div>
     </section>
 
     <section class="py-section px-margin-x-mobile md:px-margin-x max-w-container mx-auto">
       <div class="text-center mb-16 reveal">
-        <h2 class="font-headline text-headline text-deep-forest mb-4">{{ locale.t.events.galleryTitle }}</h2>
-        <p class="text-body-lg text-on-surface-variant max-w-2xl mx-auto font-light">{{ locale.t.events.gallerySubtitle }}</p>
+        <h2 class="font-headline text-headline text-deep-forest mb-4">{{ t.events.galleryTitle }}</h2>
+        <p class="text-body-lg text-on-surface-variant max-w-2xl mx-auto font-light">{{ t.events.gallerySubtitle }}</p>
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div
@@ -55,7 +55,7 @@
         to="/contact"
         class="inline-block px-12 py-5 bg-deep-forest text-cream font-label text-label tracking-[0.2em] uppercase hover:bg-opacity-90 transition-all active:scale-95"
       >
-        {{ locale.t.events.cta }}
+        {{ t.events.cta }}
       </router-link>
     </section>
   </main>
@@ -66,6 +66,6 @@ import { useLocaleStore } from '../stores/locale'
 import { useScrollReveal } from '../composables/useScrollReveal'
 import PackageCard from '../components/PackageCard.vue'
 
-const locale = useLocaleStore()
+const { t } = useLocaleStore()
 useScrollReveal()
 </script>

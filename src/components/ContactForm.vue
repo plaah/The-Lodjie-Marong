@@ -1,8 +1,8 @@
 <template>
-  <form @submilocale.t.prevent="handleSubmit" class="space-y-6" novalidate>
+  <form @submit.prevent="handleSubmit" class="space-y-6" novalidate>
     <div>
       <label :for="nameId" class="block text-label text-deep-forest uppercase tracking-widest mb-2">
-        {{ locale.t.contaclocale.t.form.name }} <span class="text-red-500">*</span>
+        {{ t.contact.form.name }} <span class="text-red-500">*</span>
       </label>
       <input
         :id="nameId"
@@ -17,7 +17,7 @@
 
     <div>
       <label :for="emailId" class="block text-label text-deep-forest uppercase tracking-widest mb-2">
-        {{ locale.t.contaclocale.t.form.email }} <span class="text-red-500">*</span>
+        {{ t.contact.form.email }} <span class="text-red-500">*</span>
       </label>
       <input
         :id="emailId"
@@ -32,7 +32,7 @@
 
     <div>
       <label :for="phoneId" class="block text-label text-deep-forest uppercase tracking-widest mb-2">
-        {{ locale.t.contaclocale.t.form.phone }} <span class="text-red-500">*</span>
+        {{ t.contact.form.phone }} <span class="text-red-500">*</span>
       </label>
       <input
         :id="phoneId"
@@ -47,7 +47,7 @@
 
     <div>
       <label :for="dateId" class="block text-label text-deep-forest uppercase tracking-widest mb-2">
-        {{ locale.t.contaclocale.t.form.date }}
+        {{ t.contact.form.date }}
       </label>
       <input
         :id="dateId"
@@ -59,7 +59,7 @@
 
     <div>
       <label :for="messageId" class="block text-label text-deep-forest uppercase tracking-widest mb-2">
-        {{ locale.t.contaclocale.t.form.message }}
+        {{ t.contact.form.message }}
       </label>
       <textarea
         :id="messageId"
@@ -70,7 +70,7 @@
     </div>
 
     <div v-if="submitStatus" :class="['p-4 text-center font-body', submitStatus === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800']">
-      {{ submitStatus === 'success' ? locale.t.contaclocale.t.form.success : locale.t.contaclocale.t.form.error }}
+      {{ submitStatus === 'success' ? t.contact.form.success : t.contact.form.error }}
     </div>
 
     <button
@@ -78,7 +78,7 @@
       :disabled="isSubmitting"
       class="w-full px-10 py-4 bg-deep-forest text-cream font-label text-label tracking-[0.2em] uppercase hover:bg-opacity-90 transition-all active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
     >
-      {{ isSubmitting ? locale.t.contaclocale.t.form.submitting : locale.t.contaclocale.t.form.submit }}
+      {{ isSubmitting ? t.contact.form.submitting : t.contact.form.submit }}
     </button>
   </form>
 </template>
@@ -87,7 +87,7 @@
 import { ref, reactive } from 'vue'
 import { useLocaleStore } from '../stores/locale'
 
-const locale = useLocaleStore()
+const { t } = useLocaleStore()
 const nameId = `name-${Math.random().toString(36).slice(2)}`
 const emailId = `email-${Math.random().toString(36).slice(2)}`
 const phoneId = `phone-${Math.random().toString(36).slice(2)}`
@@ -110,22 +110,22 @@ function validateField(field) {
   errors[field] = undefined
 
   if (field === 'name' && !form.name.trim()) {
-    errors.name = locale.t.contaclocale.t.form.required
+    errors.name = t.contact.form.required
   }
 
   if (field === 'email') {
     if (!form.email.trim()) {
-      errors.email = locale.t.contaclocale.t.form.required
+      errors.email = t.contact.form.required
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
-      errors.email = locale.t.contaclocale.t.form.invalidEmail
+      errors.email = t.contact.form.invalidEmail
     }
   }
 
   if (field === 'phone') {
     if (!form.phone.trim()) {
-      errors.phone = locale.t.contaclocale.t.form.required
+      errors.phone = t.contact.form.required
     } else if (!/^[\d\s\-\+\(\)]{8,}$/.test(form.phone)) {
-      errors.phone = locale.t.contaclocale.t.form.invalidPhone
+      errors.phone = t.contact.form.invalidPhone
     }
   }
 }
@@ -134,7 +134,7 @@ function validateAll() {
   validateField('name')
   validateField('email')
   validateField('phone')
-  return Objeclocale.t.keys(errors).length === 0
+  return Object.keys(errors).length === 0
 }
 
 async function handleSubmit() {
