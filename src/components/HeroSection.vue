@@ -32,7 +32,7 @@
 import { useScrollReveal } from '../composables/useScrollReveal'
 
 defineProps({
-  imageSrc: { type: String, default: '/images/hero-placeholder.svg' },
+  imageSrc: { type: String, default: '/images/hero.jpeg' },
   altText: { type: String, default: 'The Lodjie Marong venue' },
   subtitle: { type: String, required: true },
   title: { type: String, required: true },

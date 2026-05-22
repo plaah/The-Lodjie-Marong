@@ -1,5 +1,6 @@
 <template>
   <div class="min-h-screen bg-cream text-on-surface font-body overflow-x-hidden">
+    <LoadingScreen />
     <Navbar />
     <router-view v-slot="{ Component }">
       <transition name="fade" mode="out-in">
@@ -13,6 +14,7 @@
 <script setup>
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
+import LoadingScreen from './components/LoadingScreen.vue'
 </script>
 
 <style>
