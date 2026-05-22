@@ -6,42 +6,14 @@ import { dirname, join } from 'path'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const kb = JSON.parse(readFileSync(join(__dirname, '../src/data/knowledge-base.json'), 'utf-8'))
 
-const rateLimitMap = new Map()
-
-const RATE_LIMIT_MAX = 10
-const RATE_LIMIT_WINDOW_MS = 60_000
-const CLEANUP_INTERVAL_MS = 5 * 60_000
-
-function checkRateLimit(key) {
-  const now = Date.now()
-  const entry = rateLimitMap.get(key)
-
-  if (!entry || now > entry.resetTime) {
-    rateLimitMap.set(key, { count: 1, resetTime: now + RATE_LIMIT_WINDOW_MS })
-    return true
-  }
-
-  entry.count += 1
-  if (entry.count > RATE_LIMIT_MAX) {
-    return false
-  }
-
-  return true
+function sendJson(res, statusCode, body) {
+  res.writeHead(statusCode, { 'Content-Type': 'application/json' })
+  res.end(JSON.stringify(body))
 }
 
-function scheduleCleanup() {
-  setTimeout(() => {
-    const now = Date.now()
-    for (const [key, entry] of rateLimitMap) {
-      if (now > entry.resetTime) {
-        rateLimitMap.delete(key)
-      }
-    }
-    scheduleCleanup()
-  }, CLEANUP_INTERVAL_MS)
-}
-
-scheduleCleanup()
+// TODO: Add proper rate limiting with Vercel KV or Upstash Redis
+// In-memory rate limiting doesn't work in stateless serverless functions.
+// Each invocation runs in an isolated container with fresh state.
 
 function parseSSELine(raw, res) {
   if (raw === '[DONE]') {
@@ -70,26 +42,26 @@ export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
 
   if (req.method === 'OPTIONS') {
-    return res.status(200).end()
+    res.writeHead(200)
+    return res.end()
   }
 
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed.' })
+    return sendJson(res, 405, { error: 'Method not allowed.' })
   }
 
   if (!process.env.NVIDIA_API_KEY) {
-    return res.status(500).json({ error: 'Chat service unavailable. Please try again later.' })
+    return sendJson(res, 500, { error: 'Chat service unavailable. Please try again later.' })
   }
 
-  const { messages, sessionId } = req.body || {}
+  const { messages } = req.body || {}
 
   if (!Array.isArray(messages) || messages.length === 0) {
-    return res.status(400).json({ error: 'Invalid request.' })
+    return sendJson(res, 400, { error: 'Invalid request.' })
   }
 
-  const rateLimitKey = sessionId || req.headers['x-forwarded-for'] || req.socket.remoteAddress || 'unknown'
-  if (!checkRateLimit(rateLimitKey)) {
-    return res.status(429).json({ error: 'Rate limit exceeded. Please wait before sending another message.' })
+  if (messages.length > 20) {
+    return sendJson(res, 400, { error: 'Message history too long. Please start a new conversation.' })
   }
 
   const systemPrompt = buildSystemPrompt(kb)
@@ -108,10 +80,11 @@ export default async function handler(req, res) {
       max_tokens: 1024,
       stream: true,
     }),
+    signal: AbortSignal.timeout(8000),
   })
 
   if (!nvidiaResponse.ok) {
-    return res.status(502).json({ error: 'Connection to AI service failed. Please try again or contact us via WhatsApp.' })
+    return sendJson(res, 502, { error: 'Connection to AI service failed. Please try again or contact us via WhatsApp.' })
   }
 
   res.setHeader('Content-Type', 'text/event-stream')
