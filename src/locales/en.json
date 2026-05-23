@@ -134,5 +134,12 @@
   "common": {
     "language": "ID",
     "mapsCta": "Find Us on Google Maps"
+  },
+  "chat": {
+    "title": "Lodjie Assistant",
+    "placeholder": "Type your message...",
+    "welcome": "Welcome to The Lodjie Marong! How can we help you?",
+    "send": "Send",
+    "error": "An error occurred. Please try again."
   }
 }

@@ -5,7 +5,6 @@
         src="/images/logo.png"
         alt="The Lodjie Marong"
         class="h-16 w-auto mb-4"
-        style="filter: brightness(0) saturate(100%) invert(95%) sepia(5%) saturate(200%) hue-rotate(90deg);"
       />
       <p class="text-body text-cream/70 max-w-lg mb-12">
         {{ locale.t.footer.description }}

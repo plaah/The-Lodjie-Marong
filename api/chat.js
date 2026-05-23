@@ -81,6 +81,23 @@ export default async function handler(req, res) {
   const lang = detectLanguage(messages[0]?.content || '')
   const systemPrompt = buildSystemPrompt(kb, lang)
 
+  const allMessages = messages.map((m, i) =>
+    i === 0
+      ? { role: 'user', content: `${systemPrompt}\n\n---\n\n${m.content}` }
+      : m
+  )
+
+  const validMessages = []
+  for (const m of allMessages) {
+    if (!m.content) continue
+    if (validMessages.length > 0 && validMessages[validMessages.length - 1].role === m.role) continue
+    validMessages.push(m)
+  }
+
+  if (validMessages.length === 0 || validMessages[validMessages.length - 1].role !== 'user') {
+    return sendJson(res, 400, { error: 'Invalid message sequence.' })
+  }
+
   const nvidiaResponse = await fetch('https://integrate.api.nvidia.com/v1/chat/completions', {
     method: 'POST',
     headers: {
@@ -89,11 +106,7 @@ export default async function handler(req, res) {
     },
     body: JSON.stringify({
       model: 'google/gemma-2-2b-it',
-      messages: messages.map((m, i) =>
-        i === 0
-          ? { role: 'user', content: `${systemPrompt}\n\n---\n\n${m.content}` }
-          : m
-      ),
+      messages: validMessages,
       temperature: 0.2,
       top_p: 0.7,
       max_tokens: 1024,
@@ -103,6 +116,8 @@ export default async function handler(req, res) {
   })
 
   if (!nvidiaResponse.ok) {
+    const errBody = await nvidiaResponse.text()
+    console.error('NVIDIA API error:', nvidiaResponse.status, errBody.substring(0, 200))
     return sendJson(res, 502, { error: 'Connection to AI service failed. Please try again or contact us via WhatsApp.' })
   }
 

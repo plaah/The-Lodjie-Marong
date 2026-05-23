@@ -2,7 +2,7 @@
 
 ## Init
 
-**ALWAYS** load the `karpathy-guidelines` skill at session start before any coding work.
+**ALWAYS** load the `karpathy-guidelines` skill at session start before any coding work. and every message.
 This skill enforces: think before coding, simplicity first, surgical changes, goal-driven execution.
 
 ## Project

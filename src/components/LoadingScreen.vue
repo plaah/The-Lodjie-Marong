@@ -9,7 +9,6 @@
           src="/images/logo.png"
           alt="The Lodjie Marong"
           class="h-24 w-auto mb-8 animate-pulse"
-          style="filter: brightness(0) saturate(100%) invert(95%) sepia(5%) saturate(200%) hue-rotate(90deg);"
         />
         <div class="flex gap-2">
           <span

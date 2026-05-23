@@ -15,7 +15,7 @@
         <div class="md:col-span-6 md:col-start-7 relative reveal delay-200">
           <div class="aspect-[4/5] bg-sage-wash overflow-hidden">
             <img
-              src="/images/gallery-2.svg"
+              src="/images/hero.jpeg"
               alt="The Lodjie Marong heritage hall"
               class="w-full h-full object-cover"
               loading="lazy"

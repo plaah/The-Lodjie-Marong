@@ -64,6 +64,22 @@ export default defineConfig(({ command }) => ({
               const lang = detectLanguage(messages[0]?.content || '')
               const systemPrompt = buildSystemPrompt(kb, lang)
 
+              const validMessages = []
+              for (const m of messages.map((m, i) =>
+                i === 0
+                  ? { role: 'user', content: systemPrompt + '\n\n---\n\n' + m.content }
+                  : m
+              )) {
+                if (!m.content) continue
+                if (validMessages.length > 0 && validMessages[validMessages.length - 1].role === m.role) continue
+                validMessages.push(m)
+              }
+
+              if (validMessages.length === 0 || validMessages[validMessages.length - 1].role !== 'user') {
+                res.writeHead(400, { 'Content-Type': 'application/json' })
+                return res.end(JSON.stringify({ error: 'Invalid message sequence.' }))
+              }
+
               if (!apiKey) {
                 res.writeHead(500, { 'Content-Type': 'application/json' })
                 return res.end(JSON.stringify({ error: 'Chat service unavailable. Please try again later.' }))
@@ -77,11 +93,7 @@ export default defineConfig(({ command }) => ({
                 },
                 body: JSON.stringify({
                   model: 'google/gemma-2-2b-it',
-                  messages: messages.map((m, i) =>
-                    i === 0
-                      ? { role: 'user', content: `${systemPrompt}\n\n---\n\n${m.content}` }
-                      : m
-                  ),
+                  messages: validMessages,
                   temperature: 0.2,
                   top_p: 0.7,
                   max_tokens: 1024,
@@ -91,6 +103,8 @@ export default defineConfig(({ command }) => ({
               })
 
               if (!nvidiaResponse.ok) {
+                const errBody = await nvidiaResponse.text()
+                console.error('NVIDIA API error:', nvidiaResponse.status, errBody.substring(0, 200))
                 res.writeHead(502, { 'Content-Type': 'application/json' })
                 return res.end(JSON.stringify({ error: 'Connection to AI service failed.' }))
               }

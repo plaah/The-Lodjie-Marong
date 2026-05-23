@@ -134,5 +134,12 @@
   "common": {
     "language": "EN",
     "mapsCta": "Temukan di Google Maps"
+  },
+  "chat": {
+    "title": "Asisten Lodjie",
+    "placeholder": "Ketik pesan Anda...",
+    "welcome": "Selamat datang di The Lodjie Marong! Ada yang bisa kami bantu?",
+    "send": "Kirim",
+    "error": "Terjadi kesalahan. Silakan coba lagi."
   }
 }

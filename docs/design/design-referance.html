@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>The Lodjie | Heritage Sanctuary in Marong</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#afcaaf",
+                        "surface-container-low": "#f5f3f0",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#dbdad7",
+                        "tertiary-container": "#6a464e",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#c3c8c0",
+                        "on-surface-variant": "#434842",
+                        "primary-fixed": "#ceeace",
+                        "outline": "#737971",
+                        "inverse-surface": "#30312f",
+                        "on-secondary-fixed-variant": "#574500",
+                        "on-tertiary-container": "#e6b6bf",
+                        "on-background": "#1b1c1a",
+                        "on-tertiary-fixed": "#2e131a",
+                        "on-surface": "#1b1c1a",
+                        "surface": "#faf9f6",
+                        "on-secondary-fixed": "#241a00",
+                        "secondary": "#735c00",
+                        "background": "#faf9f6",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#e9e8e5",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#09200f",
+                        "surface-container": "#efeeea",
+                        "primary": "#273f2b",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#b2ceb3",
+                        "on-error-container": "#93000a",
+                        "cream-background": "#FDFBF7",
+                        "tertiary": "#503037",
+                        "surface-variant": "#e3e2df",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#ffd9e0",
+                        "on-tertiary-fixed-variant": "#603d45",
+                        "inverse-on-surface": "#f2f1ed",
+                        "surface-container-highest": "#e3e2df",
+                        "secondary-container": "#fed65b",
+                        "primary-container": "#3e5641",
+                        "on-secondary-container": "#745c00",
+                        "surface-bright": "#faf9f6",
+                        "secondary-fixed": "#ffe088",
+                        "tertiary-fixed-dim": "#eabac3",
+                        "deep-forest": "#2A3B2C",
+                        "on-primary-fixed-variant": "#354c38",
+                        "surface-tint": "#4c644e",
+                        "sage-wash": "#E9EDDE",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#e9c349",
+                        "inverse-primary": "#b2ceb3",
+                        "warm-stone": "#90673C"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "section-gap": "120px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "24px",
+                        "gutter": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["EB Garamond"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["EB Garamond"],
+                        "label-caps": ["Inter"],
+                        "display-lg-mobile": ["EB Garamond"],
+                        "headline-sm": ["EB Garamond"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .glass-header {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .hero-zoom {
+            transition: transform 20s linear;
+        }
+
+        .hero-zoom:hover {
+            transform: scale(1.1);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 2px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #2A3B2C;
+        }
+    </style>
+</head>
+
+<body class="bg-cream-background text-on-surface font-body-md overflow-x-hidden">
+    <!-- TopNavBar Shell -->
+    <header
+        class="fixed top-0 w-full z-50 h-20 bg-white/60 dark:bg-deep-forest/60 backdrop-blur-md border-b border-warm-stone/20">
+        <nav class="flex justify-between items-center px-margin-desktop max-w-container-max mx-auto h-full">
+            <div
+                class="text-headline-sm font-headline-sm text-deep-forest dark:text-cream-background tracking-widest uppercase">
+                <img src="https://lh3.googleusercontent.com/aida/ADBb0ugBrYvSmJZSgG1hG6MiGXbfjPG0y3XG8puuW53YRBxRZM6vLlnC-b35gIRS0Pj6qjqWCiSczQmkfJrpfNOUoW-1lbY-e0hKGqorqBoKTmMgWE5g4__DVfCm09lJ0n858e2xXSYN2-UIb2Lo9mG596V9coBVu1HqhqWgL_kjOGDpi3SsO0h3NctjjzqeRoY3Qd3_ZeVQ3e3r_Fj02gfeJ-pK-czFfjOz69SpFT4P_3clsWbLBDGQmOz7ISiIZX8CDOfnE9VtvPq5G1U"
+                    alt="The Lodjie" class="h-12 w-auto object-contain">
+            </div>
+            <div class="hidden md:flex gap-10 items-center">
+                <a class="text-label-caps font-label-caps text-deep-forest dark:text-cream-background border-b border-deep-forest dark:border-cream-background pb-1 hover:opacity-80 transition-opacity duration-300"
+                    href="#home">Home</a>
+                <a class="text-label-caps font-label-caps text-on-surface-variant dark:text-outline-variant hover:text-deep-forest transition-colors"
+                    href="#about">About</a>
+                <a class="text-label-caps font-label-caps text-on-surface-variant dark:text-outline-variant hover:text-deep-forest transition-colors"
+                    href="#events">Events</a>
+                <a class="text-label-caps font-label-caps text-on-surface-variant dark:text-outline-variant hover:text-deep-forest transition-colors"
+                    href="#contact">Contact</a>
+                <button
+                    class="ml-4 px-6 py-2 bg-deep-forest text-cream-background font-label-caps text-[10px] tracking-[0.2em] uppercase hover:bg-opacity-90 transition-all active:scale-95">
+                    Enquire Now
+                </button>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-deep-forest material-symbols-outlined" data-icon="menu">menu</button>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-screen w-full overflow-hidden flex items-center justify-center" id="home">
+            <div class="absolute inset-0 z-0">
+                <img alt="The Lodjie Main Estate" class="w-full h-full object-cover hero-zoom"
+                    data-alt="A grand, timeless estate exterior captured during the golden hour, featuring classic architectural columns and a lush green lawn. The atmosphere is serene and exclusive, with soft sunlight filtering through ancient trees, emphasizing the old-money elegance of the sanctuary. The color palette is dominated by warm creams, deep greens, and soft sunset oranges, evoking a premium editorial feel."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3OcKo0v5jlRBaT-PHTzKAbOA0B6fKTP2DEfIOPTxIIpxfhc4EHuzW-tuFsPbPK6FqW4F8jjy-YF_utFAgFb1rGtNec0kuGkNS2lhpCUuUtxfU4fzpn8apJcObNXLDng7NaSxapF4P5i_lXX-InQJqoEMnPiWuFVVPjasWD9l6C3-SMUZSzRCTJE5lj98FJPD6gdtM-MKs5AW7WDp-13cuqawxoiwYzErXES_1xZ3S6PSKE4c-f3z8UGi0LdO7QYgr0JjPnQ1o-zbR">
+                <div class="absolute inset-0 bg-black/20"></div>
+            </div>
+            <div class="relative z-10 text-center px-margin-mobile">
+                <span
+                    class="block font-label-caps text-label-caps text-cream-background mb-6 tracking-[0.3em] uppercase reveal active">Heritage
+                    Sanctuary • Marong</span>
+                <h1
+                    class="font-display-lg text-display-lg-mobile md:text-display-lg text-cream-background reveal delay-100 italic active">
+                    Where Legacy Meets <br> Modern Grace
+                </h1>
+                <div class="mt-12 reveal delay-200 active">
+                    <a class="px-10 py-4 border border-cream-background text-cream-background font-label-caps text-label-caps tracking-[0.2em] uppercase hover:bg-cream-background hover:text-deep-forest transition-all"
+                        href="#about">
+                        Discover the Grounds
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Value Proposition / Editorial Gallery -->
+        <section class="py-section-gap bg-sage-wash overflow-hidden">
+            <div class="px-margin-desktop max-w-container-max mx-auto mb-16 reveal active">
+                <h2 class="font-headline-md text-headline-md text-deep-forest">A Canvas for Timeless Stories</h2>
+                <p class="mt-4 text-body-lg text-on-surface-variant max-w-2xl font-light">From the intimate garden vows
+                    to the grand celebrations in our heritage hall, every corner of The Lodjie is curated for effortless
+                    beauty.</p>
+            </div>
+            <div class="flex overflow-x-auto gap-8 px-margin-desktop custom-scrollbar pb-10">
+                <div class="flex-shrink-0 w-[400px] h-[550px] bg-white p-4 reveal delay-100 active">
+                    <img class="w-full h-full object-cover"
+                        data-alt="A meticulously set long wooden table in an outdoor garden setting at The Lodjie. The table is adorned with white linen runners, delicate floral arrangements of cream roses, and vintage silverware. Soft dappled sunlight peaks through the canopy of overhead trees, creating an airy and natural wedding atmosphere with sophisticated, understated luxury."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgG1QDdIFnCevxv2NfrMxoZx2R3tmY3E1na_pxP7L8LR-9XMt0yi8xYfYteNN8qktGQ157nShTjD6nelOMYS7MGNr72HH1VsruFugOrm3C6HLHlQw1WjHWxvegbEDvkK78mZf6gqqxlI8-GrIWrq7c2dhKZNQrU9UeOfCU5hUaGvgsMHStvVNO3t7pakoqDaF7YJ78_WC_6KigneO0AFYbXjmDETfEeFLovE-1HPgjXl7BTqslmT9wRLa_Kg5R8pkszkEbOs-K0sSI">
+                    <p class="mt-4 font-label-caps text-label-caps text-deep-forest uppercase">The Garden Terrace</p>
+                </div>
+                <div class="flex-shrink-0 w-[600px] h-[550px] bg-deep-forest p-4 reveal delay-200 active">
+                    <img class="w-full h-full object-cover"
+                        data-alt="An elegant interior shot of the heritage hall at The Lodjie, showcasing high ceilings, ornate moldings, and a grand crystal chandelier. Large windows look out into the lush green gardens, blending indoor luxury with natural serenity. The lighting is bright and high-key, emphasizing the cream-colored walls and the timeless architectural weight of the estate."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvTwbFXvDv3XfpDPoWnKAzpbJf41i2nVIaemOxPm-6IO2ECUNCWz6Yk9KRRuNlj1Fcx-d1uO8apUwYobm2LkYc4Zq8rubiBM54JcYxk3EaIRgMdUrbKRp1NtLSRdHC3Sjv_VNFW6y8bSOWrmWbb1Oib5Hrspr5Izyu6WHTBKw0wVeyxVKY0jfHjw3pqizUX5pOeQOCCJphsYkYY0ygQZNbJeMTUFNIi2r2rehH5QXnhh-aL5-TZwVeOFmITakeuSbDIFc3Z4Gxf0i8">
+                    <p class="mt-4 font-label-caps text-label-caps text-cream-background uppercase">Heritage Hall
+                        Reception</p>
+                </div>
+                <div class="flex-shrink-0 w-[350px] h-[550px] bg-white p-4 reveal delay-300 active">
+                    <img class="w-full h-full object-cover"
+                        data-alt="A close-up of a bride's ivory lace gown draped over a vintage wooden chair in a sunlit room of the Lodjie estate. The textures of the lace and the polished wood are captured with sharp detail, reflecting a mood of quiet luxury and preparation. The aesthetic is homey and warm, with soft natural light flooding the scene from a nearby window."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVJKEM15Ge39-6Hhe6vdaZd2L8igP4s8dxGEs4oNci4xU8-r23gQOzTpiFauKvyZmq3YzBqfjWAmD9czBxdxcFOTgLC0RlPiFhQnIn-SLvTIraQS0yFxNDv6VcngsYXUEs1hdPGJPkpLvpGANOwB50kYCKK7_EYXtBnhK1J0tGvX2NGq4PGU-u_ICCS9GvREedEtk9kHToJUjMguP0VqbaauBoZdkgnhAC5DOTasGT0sqW_czCPjZRO7gLqPb4iTvTivsmQPuyKCk5">
+                    <p class="mt-4 font-label-caps text-label-caps text-deep-forest uppercase">The Bridal Suite</p>
+                </div>
+                <div class="flex-shrink-0 w-[500px] h-[550px] bg-white p-4 reveal delay-400">
+                    <img class="w-full h-full object-crop"
+                        data-alt="A sweeping view of the manicured lawns of The Lodjie, featuring ancient trees and a small stone fountain. The landscape design is minimalist yet lush, with intentional breathing gaps and wide-open spaces that evoke a sense of calm and exclusivity. The early morning mist adds a layer of ethereal beauty to the natural garden sanctuary."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb03tnGxqvW_GujxG9Ldqm9xSGjnO8JxsLRQ9r0tlwS17nNzalsA3TH29iSEJf9qqqdn_29aJe1lE41zqwKa8HK_LcCPqXrNvCJKgh6PS5pTedSKdpafpZNXsn8GDvM1durU2Ztort99up-rkUHcLohkhrCKuPmtOiKGf4ImyFOuF0BigHcgLugVDn15wOq4iLAO5dbATTqSzJc9ykZ4XITNKFMaZMi5MH6v1GRt7j8C-JLvKi0PilKQnu9yEavTAZslbkquHlQf2v">
+                    <p class="mt-4 font-label-caps text-label-caps text-deep-forest uppercase">The North Lawns</p>
+                </div>
+            </div>
+        </section>
+        <!-- About Section (Heritage Vibe) -->
+        <section class="py-section-gap px-margin-desktop max-w-container-max mx-auto" id="about">
+            <div class="grid md:grid-cols-12 gap-gutter items-center">
+                <div class="md:col-span-5 reveal active">
+                    <span class="font-label-caps text-label-caps text-warm-stone mb-4 block uppercase">Our Legacy</span>
+                    <h2 class="font-headline-md text-headline-md text-deep-forest mb-8 italic">A Sanctuary of Quiet
+                        Luxury</h2>
+                    <p class="text-body-lg text-on-surface-variant leading-relaxed mb-6 font-light">
+                        Founded on the principles of heritage and hospitality, The Lodjie represents the architectural
+                        soul of Marong. What began as a private family retreat has evolved into a premier destination
+                        for those seeking a wedding venue with historical weight and natural grace.
+                    </p>
+                    <p class="text-body-md text-on-surface-variant leading-relaxed font-light italic">
+                        "We believe luxury is found in the whispers of history and the breath of the garden, not just
+                        the grandeur of the architecture."
+                    </p>
+                    <div class="mt-12">
+                        <button
+                            class="flex items-center gap-4 text-label-caps font-label-caps text-deep-forest hover:gap-6 transition-all duration-300">
+                            Our Full History <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="md:col-span-6 md:col-start-7 relative reveal delay-200 active">
+                    <div class="aspect-[4/5] bg-surface-container overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            data-alt="A vintage-style portrait of the estate's architectural details, focusing on an ivy-covered stone archway. The photography has a muted, editorial tone with deep shadows and soft highlights, evoking a sense of discovery and mystery. The color palette stays true to deep forest greens and warm stone tones, fitting the old-money aesthetic perfectly."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6bEFxRTy-U9XTmHuKlC3wI0x0y0XB_40NZsyJ_Z2mGCPPpUpCRaesfj3lhe9a41I_SQA7dEjOeMHr5QUcFWUgCYGvLb2gj82jkMsqCUI_wPnFcvFNLaj1x2asJgqoxozsen9UFgwKx7SXftZ7OU0u4QbbPHmn768vaIdFgMh6usoWw4LwOfmZNYYGQ2C0bl8FhgsZ1aIO2mE9ly5VMtyIF3eBYjPXtxdvuEli5Le4feYfybShbmT-8Io_5lA-aBR_vr6HMB9CzTFJ">
+                    </div>
+                    <div
+                        class="absolute -bottom-10 -left-10 w-2/3 aspect-square bg-cream-background p-4 border border-warm-stone/10 hidden md:block">
+                        <img class="w-full h-full object-cover"
+                            data-alt="A high-contrast detail shot of an elegant white column against a backdrop of dark green foliage. The play of light and shadow highlights the clean lines and traditional proportions of the architecture. This image emphasizes the airy and natural atmosphere of The Lodjie, using minimalist composition to convey premium quality."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUMg1XGyOfyug-NzSlukhIipNv8ivN4bWfcYvJNO9eE3aupkLRFhL1ejG4jFk5U2v1EWi0eILajfBf8P8dPVEDGtCYlbxzmzIRtTyaqTILeTcZdnnntiVFdS_O4sLKcuEGqBkLmT6rfLfMr9C_YmD5WC4qiA-3U1qu61vfhlPBuiUo4_Az-tfyCM0kGpOzKXIBt73mjfGxQ_jX4nexIENf7-1YLY4M4TWwLzMa7kO-6Q7-Z0mWR-9gVA18FxkSnT6KrjsblkpjLTD8">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Events Section -->
+        <section class="py-section-gap bg-deep-forest text-cream-background" id="events">
+            <div class="px-margin-desktop max-w-container-max mx-auto text-center reveal active">
+                <span
+                    class="font-label-caps text-label-caps text-on-primary-container mb-4 block uppercase">Celebrations</span>
+                <h2 class="font-headline-md text-headline-md mb-16">The Wedding Journey</h2>
+                <div class="grid md:grid-cols-3 gap-12 text-left">
+                    <div class="border-t border-cream-background/20 pt-8 reveal delay-100 active">
+                        <h3 class="font-headline-sm text-headline-sm mb-4 italic">The Intimate</h3>
+                        <p class="text-body-md font-light opacity-80 mb-8">Curated for gatherings of up to 40 guests.
+                            Perfect for those who value profound connection over ceremony.</p>
+                        <ul class="space-y-3 font-label-caps text-[10px] tracking-widest uppercase opacity-60">
+                            <li class="">Private Garden Access</li>
+                            <li class="">Bespoke Culinary Pairing</li>
+                            <li class="">Heritage Suite</li>
+                        </ul>
+                    </div>
+                    <div class="border-t border-cream-background/20 pt-8 reveal delay-200 active">
+                        <h3 class="font-headline-sm text-headline-sm mb-4 italic">The Signature</h3>
+                        <p class="text-body-md font-light opacity-80 mb-8">Our classic package for up to 150 guests. The
+                            quintessence of The Lodjie experience.</p>
+                        <ul class="space-y-3 font-label-caps text-[10px] tracking-widest uppercase opacity-60">
+                            <li class="">Full Hall &amp; Lawn Access</li>
+                            <li class="">Multi-Course Estate Dining</li>
+                            <li class="">Floral Design Support</li>
+                        </ul>
+                    </div>
+                    <div class="border-t border-cream-background/20 pt-8 reveal delay-300 active">
+                        <h3 class="font-headline-sm text-headline-sm mb-4 italic">The Estate</h3>
+                        <p class="text-body-md font-light opacity-80 mb-8">Exclusive 3-day estate hire for up to 300
+                            guests. A full immersion into heritage luxury.</p>
+                        <ul class="space-y-3 font-label-caps text-[10px] tracking-widest uppercase opacity-60">
+                            <li class="">Full Grounds Exclusivity</li>
+                            <li class="">Concierge Planning Team</li>
+                            <li class="">Guest Accommodation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Location Section -->
+        <section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+            <div class="grid md:grid-cols-12 gap-gutter items-center">
+                <div class="md:col-span-4 reveal active">
+                    <h2 class="font-headline-md text-headline-md text-deep-forest mb-8">Nestled in Marong</h2>
+                    <p class="text-body-md text-on-surface-variant font-light mb-8">A hidden sanctuary just far enough
+                        to feel like another world, yet close enough for seamless travel.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-warm-stone">location_on</span>
+                            <div>
+                                <p class="font-label-caps text-label-caps text-deep-forest uppercase">Address</p>
+                                <p class="text-body-md font-light">128 Heritage Way, Marong Estate</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-warm-stone">schedule</span>
+                            <div>
+                                <p class="font-label-caps text-label-caps text-deep-forest uppercase">Viewing Hours</p>
+                                <p class="text-body-md font-light">Mon - Sat: 09:00 - 17:00<br>Sunday by appointment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="md:col-span-8 h-[450px] bg-surface-container reveal delay-200 overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-700 active">
+                    <div class="absolute inset-0 bg-deep-forest/5 pointer-events-none"></div>
+                    <img alt="Map location visualization" class="w-full h-full object-cover opacity-60"
+                        data-location="Marong"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu6Z77lEzP_8-Tsl7LUi3sRgQokF7yrHDISWnFT-T9V4JySejymAgY_zczTejoxy4q9YV519OrDifNETdhTPjky49KQyhRO1V5pkVT0fXIkwxvfk8aFw2m-MitPHBdyOFNR3ZS5sQcsskaeCa0KeXcpuxsJpFTQR89-lLNMt2IffF0vezHPei3hlKiVLZDRkt0tx9SwbbGD2HEayTvn45h8KUYN33NI9kRQ39eVh9WGi86zUbc6y5lk0jMh_nqWZeONWENoREP_fOB">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="p-6 bg-white shadow-xl flex items-center gap-4 reveal delay-500 active">
+                            <span class="material-symbols-outlined text-deep-forest">explore</span>
+                            <span
+                                class="font-label-caps text-label-caps text-deep-forest uppercase tracking-widest">Find
+                                Us on Google Maps</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Social & Contact -->
+        <section class="pb-section-gap px-margin-desktop text-center reveal active" id="contact">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="font-headline-md text-headline-md text-deep-forest mb-12 italic">Begin Your Heritage Tale
+                </h2>
+                <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+                    <!-- WhatsApp Premium Button -->
+                    <a class="w-full md:w-auto px-12 py-5 bg-[#25D366] text-white flex items-center justify-center gap-4 font-label-caps text-label-caps tracking-[0.2em] uppercase hover:shadow-lg transition-all active:scale-95 group"
+                        href="#">
+                        <span class="material-symbols-outlined group-hover:scale-110 transition-transform">chat</span>
+                        WhatsApp Enquiries
+                    </a>
+                    <a class="w-full md:w-auto px-12 py-5 border border-deep-forest text-deep-forest flex items-center justify-center gap-4 font-label-caps text-label-caps tracking-[0.2em] uppercase hover:bg-deep-forest hover:text-white transition-all active:scale-95 group"
+                        href="#">
+                        <span class="material-symbols-outlined group-hover:scale-110 transition-transform">mail</span>
+                        Request Brochure
+                    </a>
+                </div>
+                <div class="mt-20 flex justify-center gap-10">
+                    <a class="text-on-surface-variant hover:text-deep-forest transition-colors font-label-caps text-label-caps uppercase tracking-widest"
+                        href="#">Instagram</a>
+                    <a class="text-on-surface-variant hover:text-deep-forest transition-colors font-label-caps text-label-caps uppercase tracking-widest"
+                        href="#">Facebook</a>
+                    <a class="text-on-surface-variant hover:text-deep-forest transition-colors font-label-caps text-label-caps uppercase tracking-widest"
+                        href="#">Pinterest</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer Shell -->
+    <footer class="bg-deep-forest dark:bg-deep-forest w-full py-20 px-margin-desktop text-cream-background">
+        <div class="flex flex-col items-center text-center max-w-container-max mx-auto">
+            <div class="text-headline-md font-headline-md text-cream-background mb-4 uppercase tracking-[0.4em]"><img
+                    src="https://lh3.googleusercontent.com/aida/ADBb0ugv_hwY0foL-UfYF-9u5OD_cRMp5khXBWXisEdHm12T2UCifRahYxuOjGyZqM18P088w_D9-EEPLsyqPso5ul6xdY113oaQZxzgrsIX0wzXnEn9bcCfhcedJAeU6W5CoV_NaQpdlF4-FNjRohgJFxCwYPRxYfhBu0fSHsKGvF0n10s6jrYepxNK1zXenOPcLmeB9X2K8LTei0Z32sxKF71wAdjSHrRrG9tW4d-p3MQ8HWDtXsJniGpQoZEE"
+                    alt="The Lodjie" class="h-20 w-auto object-contain mx-auto mb-4"></div>
+            <p class="text-body-md font-body-md text-cream-background/70 max-w-lg mb-12">
+                A heritage sanctuary dedicated to the art of timeless celebration. Nestled in the heart of Marong,
+                preserving the grace of the past for the stories of the future.
+            </p>
+            <div class="flex gap-8 mb-12">
+                <a class="text-body-md font-body-md text-cream-background/70 hover:text-cream-background transition-colors"
+                    href="#">Instagram</a>
+                <a class="text-body-md font-body-md text-cream-background/70 hover:text-cream-background transition-colors"
+                    href="#">Facebook</a>
+                <a class="text-body-md font-body-md text-cream-background/70 hover:text-cream-background transition-colors"
+                    href="#">Pinterest</a>
+                <a class="text-body-md font-body-md text-cream-background/70 hover:text-cream-background transition-colors"
+                    href="#">Terms of Service</a>
+            </div>
+            <div
+                class="text-body-md font-body-md text-cream-background/50 border-t border-cream-background/10 pt-12 w-full">
+                © 2024 The Lodjie Estate. A Heritage Sanctuary in Marong.
+            </div>
+        </div>
+    </footer>
+    <!-- FAB Suppression Rule Applied (Home screen FAB would normally be here, but guidelines suggest contextual use) -->
+    <script>
+        // Intersection Observer for reveal animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Smooth scroll implementation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Sticky header opacity adjustment on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('shadow-sm');
+            } else {
+                header.classList.remove('shadow-sm');
+            }
+        });
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
