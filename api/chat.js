@@ -1,4 +1,4 @@
-import { buildSystemPrompt } from '../src/data/system-prompt.js'
+import { buildSystemPrompt, detectLanguage } from '../src/data/system-prompt.js'
 import { readFileSync } from 'fs'
 import { join } from 'path'
 
@@ -78,7 +78,8 @@ export default async function handler(req, res) {
     return sendJson(res, 400, { error: 'Message history too long. Please start a new conversation.' })
   }
 
-  const systemPrompt = buildSystemPrompt(kb)
+  const lang = detectLanguage(messages[0]?.content || '')
+  const systemPrompt = buildSystemPrompt(kb, lang)
 
   const nvidiaResponse = await fetch('https://integrate.api.nvidia.com/v1/chat/completions', {
     method: 'POST',

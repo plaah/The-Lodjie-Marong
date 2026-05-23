@@ -60,8 +60,9 @@ export default defineConfig({
               }
 
               // Import system prompt builder
-              const { buildSystemPrompt } = await import(join(__dirname, 'src/data/system-prompt.js'))
-              const systemPrompt = buildSystemPrompt(kb)
+              const { buildSystemPrompt, detectLanguage } = await import(join(__dirname, 'src/data/system-prompt.js'))
+              const lang = detectLanguage(messages[0]?.content || '')
+              const systemPrompt = buildSystemPrompt(kb, lang)
 
               if (!apiKey) {
                 res.writeHead(500, { 'Content-Type': 'application/json' })
