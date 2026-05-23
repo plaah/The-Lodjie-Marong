@@ -1,10 +1,24 @@
 import { buildSystemPrompt } from '../src/data/system-prompt.js'
 import { readFileSync } from 'fs'
-import { fileURLToPath } from 'url'
-import { dirname, join } from 'path'
+import { join } from 'path'
 
-const __dirname = dirname(fileURLToPath(import.meta.url))
-const kb = JSON.parse(readFileSync(join(__dirname, '../src/data/knowledge-base.json'), 'utf-8'))
+let kb
+
+try {
+  kb = JSON.parse(readFileSync(join(process.cwd(), 'src/data/knowledge-base.json'), 'utf-8'))
+} catch {
+  kb = { venue: {}, packages: [], facilities: [], faq: [], contact: {} }
+}
+
+function getApiKey() {
+  if (process.env.NVIDIA_API_KEY) return process.env.NVIDIA_API_KEY
+  try {
+    const envContent = readFileSync(join(process.cwd(), '.env.local'), 'utf-8')
+    const match = envContent.match(/NVIDIA_API_KEY=(.+)/)
+    if (match) return match[1].trim()
+  } catch {}
+  return null
+}
 
 function sendJson(res, statusCode, body) {
   res.writeHead(statusCode, { 'Content-Type': 'application/json' })
@@ -50,7 +64,7 @@ export default async function handler(req, res) {
     return sendJson(res, 405, { error: 'Method not allowed.' })
   }
 
-  if (!process.env.NVIDIA_API_KEY) {
+  if (!getApiKey()) {
     return sendJson(res, 500, { error: 'Chat service unavailable. Please try again later.' })
   }
 
@@ -70,17 +84,21 @@ export default async function handler(req, res) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${process.env.NVIDIA_API_KEY}`,
+      Authorization: `Bearer ${getApiKey()}`,
     },
     body: JSON.stringify({
       model: 'google/gemma-2-2b-it',
-      messages: [{ role: 'system', content: systemPrompt }, ...messages],
+      messages: messages.map((m, i) =>
+        i === 0
+          ? { role: 'user', content: `${systemPrompt}\n\n---\n\n${m.content}` }
+          : m
+      ),
       temperature: 0.2,
       top_p: 0.7,
       max_tokens: 1024,
       stream: true,
     }),
-    signal: AbortSignal.timeout(8000),
+    signal: AbortSignal.timeout(30000),
   })
 
   if (!nvidiaResponse.ok) {
