@@ -1,0 +1,129 @@
+{
+  "venue": {
+    "name": "The Lodjie Marong",
+    "type": "Luxury heritage wedding venue",
+    "location": "Wonosobo, Jawa Tengah, Indonesia",
+    "hours": "Senin-Sabtu 09:00-17:00, Minggu by appointment",
+    "description": "Warisan sanctuary seluas 2 hektar di dataran tinggi Dieng, memadukan arsitektur kolonial Jawa yang telah direstorasi dengan lanskap pegunungan hijau dan pelayanan premium. Tempat di mana setiap momen pernikahan terasa intim sekaligus megah — dikelilingi udara sejuk pegunungan dan taman tropis yang rimbun. Setiap sudut venue dirancang untuk menjadi latar foto yang abadi."
+  },
+  "packages": [
+    {
+      "name": "Intimate",
+      "capacity": "Hingga 40 tamu",
+      "priceRange": "Rp 50-80 juta",
+      "features": ["Akses Taman Privat", "Menu Kuliner Spesial", "Suite Warisan"],
+      "description": "Untuk pertemuan kecil yang mengutamakan koneksi mendalam — sempurna untuk micro wedding dan elopement.",
+      "includedServices": [
+        "Akses Taman Privat Lily selama 6 jam",
+        "Menu 3-course fine dining untuk 40 tamu",
+        "Suite Pengantin Warisan (4 jam)",
+        "Dekorasi bunga dasar",
+        "Sound system standar",
+        "Koordinator acara on-site",
+        "Area parkir untuk 20 kendaraan"
+      ],
+      "idealFor": "Micro wedding, elopement, pernikahan intim keluarga dekat",
+      "notes": "Dapat di-upgrade dengan add-on floral design dan fotografer partner"
+    },
+    {
+      "name": "Signature",
+      "capacity": "Hingga 150 tamu",
+      "priceRange": "Rp 100-180 juta",
+      "features": ["Akses Aula & Taman Penuh", "Makan Estate Multi-Kursus", "Dukungan Desain Floral"],
+      "description": "Paket klasik — esensi pengalaman The Lodjie Marong yang paling banyak dipilih pasangan.",
+      "includedServices": [
+        "Akses Aula Warisan + Taman Pernikahan selama 10 jam",
+        "Menu 5-course estate dining untuk 150 tamu",
+        "Suite Pengantin Warisan (8 jam)",
+        "Desain floral premium (bouquet, centerpiece, altar)",
+        "Sound system profesional + teknisi",
+        "Dedicated wedding concierge",
+        "Area parkir untuk 60 kendaraan",
+        "Ruang persiapan pengantin pria dan wanita terpisah",
+        "Paket foto pre-wedding di venue"
+      ],
+      "idealFor": "Pernikahan klasik dengan tamu sedang-besar, keluarga besar, pasangan yang menginginkan pengalaman lengkap",
+      "notes": "Paket paling populer — mencakup hampir semua kebutuhan pernikahan"
+    },
+    {
+      "name": "Estate",
+      "capacity": "Hingga 300 tamu",
+      "priceRange": "Rp 250-400 juta",
+      "features": ["Eksklusivitas Seluruh Area", "Tim Perencanaan Concierge", "Akomodasi Tamu"],
+      "description": "Sewa eksklusif 3 hari, imersi penuh ke kemewahan warisan — venue menjadi milik Anda sepenuhnya.",
+      "includedServices": [
+        "Eksklusivitas seluruh estate selama 3 hari",
+        "Menu 7-course estate dining untuk 300 tamu",
+        "Suite Pengantin Warisan + akomodasi 2 malam",
+        "Akomodasi tamu VIP (5 kamar heritage suite)",
+        "Desain floral mewah (full venue styling)",
+        "Sound system + lighting profesional",
+        "Tim wedding concierge 24/7",
+        "Area parkir untuk 150 kendaraan",
+        "Welcome dinner malam sebelum pernikahan",
+        "Fotografer dan videografer partner (paket lengkap)",
+        "Entertainment (live acoustic atau gamelan)",
+        "Koordinasi vendor end-to-end"
+      ],
+      "idealFor": "Pernikahan megah, celebration multi-hari, pasangan yang menginginkan pengalaman total tanpa kompromi",
+      "notes": "Paket paling eksklusif — seluruh venue privat hanya untuk Anda"
+    }
+  ],
+  "facilities": [
+    { "name": "Taman Pernikahan", "detail": "Taman hijau seluas 800m² dengan pemandangan pegunungan Dieng, kapasitas upacara outdoor hingga 300 tamu. Dilengkapi altar batu alam dan fountain klasik." },
+    { "name": "Aula Warisan", "detail": "Bangunan utama bergaya kolonial Jawa dengan langit-langit tinggi 6 meter, lantai marmer, dan lampu kristal. Kapasitas resepsi indoor hingga 300 tamu dengan AC." },
+    { "name": "Taman Privat Lily", "detail": "Taman intim di sisi barat estate, sempurna untuk upacara kecil dan cocktail hour. Kapasitas 40 tamu dengan latar sunset pegunungan." },
+    { "name": "Suite Pengantin", "detail": "Suite pengantin seluas 80m² dengan kamar mandi marmer, ruang rias makeup artist, dan balkon pribadi menghadap taman. Tersedia untuk persiapan pengantin wanita." },
+    { "name": "Ruang Persiapan Pria", "detail": "Lounge khusus untuk pengantin pria dan groomsmen, dilengkapi sofa, smart TV, dan mini bar." },
+    { "name": "Kolam Refleksi", "detail": "Spot foto ikonik — kolam air tenang di depan aula utama yang menciptakan pantulan sempurna bangunan heritage dan langit." },
+    { "name": "Jembatan Kayu", "detail": "Jembatan kayu jati di atas kolam koi, spot foto favorit untuk sesi pre-wedding dan first look." },
+    { "name": "Gazebo Warisan", "detail": "Gazebo tradisional Jawa di sudut taman, tempat akad nikah yang intim dengan kapasitas 30 tamu duduk." },
+    { "name": "Area Parkir", "detail": "Parkir luas berkapasitas 150 kendaraan, termasuk area VIP dan akses langsung ke lobby venue." },
+    { "name": "Dapur Katering", "detail": "Fasilitas dapur profesional full stainless steel dengan walk-in chiller, area plating, dan akses loading dock terpisah." },
+    { "name": "Sistem Audio & Lighting", "detail": "Sound system line array profesional, wireless microphone, intelligent lighting untuk dance floor, dan teknisi on-site." },
+    { "name": "Generator Cadangan", "detail": "Generator otomatis 50kVA untuk memastikan acara tetap berjalan tanpa gangguan listrik." }
+  ],
+  "services": [
+    { "name": "Desain Floral", "detail": "Tim floral designer in-house — mulai dari bouquet pengantin, dekorasi altar, centerpiece meja, hingga instalasi bunga gantung. Tersedia paket basic hingga premium dengan bunga lokal dan impor." },
+    { "name": "Makeup Artist Partner", "detail": "Jaringan MUA profesional area Jawa Tengah — tersedia paket pengantin, ibu pengantin, dan bridesmaids. Trial makeup bisa diatur 1 bulan sebelum acara." },
+    { "name": "Fotografi & Videografi", "detail": "Partner fotografer profesional dengan gaya candid dan fine art. Paket termasuk pre-wedding shoot di venue, liputan full day, dan album cetak premium." },
+    { "name": "Entertainment", "detail": "Tersedia opsi live acoustic, string quartet, gamelan Jawa, DJ, hingga MC profesional yang familiar dengan adat pernikahan." },
+    { "name": "Catering Partner", "detail": "Dapur profesional kami bisa digunakan oleh katering pilihan Anda dari list partner terpercaya kami — spesialisasi masakan Indonesia, Western, Chinese, dan fusion." },
+    { "name": "Wedding Cake", "detail": "Partner pastry chef untuk custom wedding cake — pilihan tier cake klasik hingga naked cake rustic. Tasting session tersedia." }
+  ],
+  "highlights": [
+    "Lokasi dataran tinggi Dieng dengan udara sejuk 18-22°C — suasana sejuk alami tanpa perlu AC outdoor",
+    "Bangunan heritage kolonial Jawa yang telah direstorasi — perpaduan kemewahan klasik dan kenyamanan modern",
+    "Area seluas 2 hektar dengan taman tropis, kolam, dan pemandangan pegunungan — privasi penuh tanpa gangguan",
+    "Tim wedding concierge berpengalaman — setiap pasangan mendapat koordinator personal dari perencanaan hingga hari-H",
+    "Fleksibilitas katering dan dekorasi — Anda bebas memilih vendor favorit atau menggunakan partner kami"
+  ],
+  "location_details": {
+    "nearest_airport": "Bandara Yogyakarta International Airport (YIA) — 2,5 jam berkendara",
+    "nearest_train": "Stasiun Wonosobo — 15 menit berkendara",
+    "nearest_hotel": "Tersedia hotel dan penginapan dalam radius 5 km di pusat kota Wonosobo untuk tamu yang tidak menginap di venue",
+    "road_access": "Akses jalan aspal mulus dari pusat kota Wonosobo, bisa dilalui bus pariwisata besar. Tersedia petunjuk arah dari jalan raya utama.",
+    "coordinates": "7.3581° S, 109.9032° E"
+  },
+  "faq": [
+    { "q": "Apakah bisa membawa katering sendiri?", "a": "Ya, Anda bebas memilih katering favorit. Kami menyediakan dapur profesional yang bisa digunakan vendor katering pilihan Anda." },
+    { "q": "Apakah ada akomodasi untuk tamu?", "a": "Paket Estate termasuk akomodasi tamu VIP (5 kamar). Untuk tamu lain, kami bisa rekomendasikan hotel di pusat Wonosobo dalam radius 5 km." },
+    { "q": "Bagaimana cara booking?", "a": "Silakan chat admin kami via WhatsApp untuk cek ketersediaan tanggal dan proses booking. Kami akan pandu step by step." },
+    { "q": "Apakah bisa survei venue dulu?", "a": "Tentu! Kami buka Senin-Sabtu 09:00-17:00. Survei Minggu atau di luar jam operasional bisa by appointment. Anda akan ditemani tim concierge kami untuk tour lengkap." },
+    { "q": "Apakah ada deposit?", "a": "Ya, deposit 30% diperlukan untuk mengamankan tanggal Anda. Pelunasan bisa dilakukan H-30 sebelum acara. Detail lengkap bisa dibahas via WhatsApp." },
+    { "q": "Bagaimana kebijakan pembatalan?", "a": "Deposit bersifat non-refundable. Pembatalan H-60 atau lebih: dikenakan 50% dari total kontrak. Pembatalan H-30 atau kurang: dikenakan 100%. Kami sangat merekomendasikan untuk reschedule daripada membatalkan." },
+    { "q": "Apakah bisa dekorasi sendiri?", "a": "Anda bebas menggunakan dekorator pilihan Anda. Kami juga punya tim floral designer in-house jika Anda ingin semuanya di-handle oleh kami. Setiap dekorator eksternal wajib koordinasi dengan tim venue untuk menjaga properti heritage." },
+    { "q": "Apakah ada rencana cadangan untuk hujan?", "a": "Ya! Kami sangat berpengalaman menghadapi cuaca Wonosobo. Aula Warisan kami berkapasitas 300 tamu indoor dengan layout fleksibel yang bisa di-setting dari upacara ke resepsi. Untuk paket Intimate, tersedia tenda transparan di Taman Privat Lily sebagai alternatif." },
+    { "q": "Apakah boleh membawa vendor sendiri?", "a": "Boleh, dengan syarat vendor tersebut sudah kami approve dan koordinasi terlebih dahulu. Kami ingin memastikan setiap vendor memahami standar venue heritage kami." },
+    { "q": "Apakah ada sesi rehearsal?", "a": "Ya, kami menyediakan 1 sesi rehearsal H-1 atau H-2 acara (1 jam) termasuk dalam semua paket. Koordinator acara kami akan memandu seluruh rangkaian." },
+    { "q": "Berapa kapasitas parkir?", "a": "Area parkir kami bisa menampung hingga 150 kendaraan termasuk bus pariwisata. Tersedia valet service opsional." },
+    { "q": "Jam berapa paling pagi bisa setup?", "a": "Untuk acara pagi/siang, setup bisa dimulai dari jam 06:00. Untuk acara sore/malam, akses setup dari jam 10:00. Koordinasi lebih detail bisa diatur dengan tim concierge." },
+    { "q": "Apakah ada aturan musik dan sound?", "a": "Musik diperbolehkan hingga jam 22:00 untuk menghormati lingkungan sekitar. Sound system profesional kami sudah diatur untuk memastikan kualitas suara optimal tanpa mengganggu area luar venue." },
+    { "q": "Apakah bisa menginap di venue?", "a": "Paket Estate termasuk akomodasi 2 malam di Suite Warisan untuk pengantin plus 5 kamar untuk tamu VIP. Untuk penginapan tambahan, tersedia hotel partner di pusat kota Wonosobo." },
+    { "q": "Apakah venue accessible untuk lansia dan kursi roda?", "a": "Ya, seluruh area venue didesain ramah lansia dan kursi roda — termasuk ramp akses, toilet khusus, dan jalur yang lebar di seluruh taman dan aula." }
+  ],
+  "contact": {
+    "whatsapp": "6282223115231",
+    "whatsappMessage": "Halo, saya tertarik dengan The Lodjie Marong. Bisa info lebih lanjut?"
+  }
+}
