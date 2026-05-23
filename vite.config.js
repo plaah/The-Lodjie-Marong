@@ -7,10 +7,10 @@ import { fileURLToPath } from 'url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   plugins: [
     vue(),
-    vercel(),
+    command === 'build' ? vercel() : null,
     {
       name: 'api-dev-handler',
       configureServer(server) {
@@ -143,10 +143,10 @@ export default defineConfig({
         })
       }
     }
-  ],
+  ].filter(Boolean),
   resolve: {
     alias: {
       '@': '/src'
     }
   }
-})
+}))
