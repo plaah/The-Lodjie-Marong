@@ -10,9 +10,9 @@
         {{ locale.t.footer.description }}
       </p>
       <div class="flex gap-8 mb-12">
-        <a href="#" aria-label="Instagram" class="text-body text-cream/70 hover:text-cream transition-colors">Instagram</a>
-        <a href="#" aria-label="Facebook" class="text-body text-cream/70 hover:text-cream transition-colors">Facebook</a>
-        <a href="#" aria-label="Pinterest" class="text-body text-cream/70 hover:text-cream transition-colors">Pinterest</a>
+        <a href="#" @click.prevent aria-label="Instagram" class="text-body text-cream/70 hover:text-cream transition-colors cursor-default">Instagram</a>
+        <a href="#" @click.prevent aria-label="Facebook" class="text-body text-cream/70 hover:text-cream transition-colors cursor-default">Facebook</a>
+        <a href="#" @click.prevent aria-label="Pinterest" class="text-body text-cream/70 hover:text-cream transition-colors cursor-default">Pinterest</a>
       </div>
       <div class="text-body text-cream/50 border-t border-cream/10 pt-12 w-full">
         {{ locale.t.footer.copyright }}

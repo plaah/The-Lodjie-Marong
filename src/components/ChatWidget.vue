@@ -122,12 +122,14 @@
 </template>
 
 <script setup>
-import { ref, watch, nextTick, onScopeDispose } from 'vue'
+import { ref, watch, nextTick, onMounted, onScopeDispose } from 'vue'
 import { useLocaleStore } from '../stores/locale'
 import { useChatSession } from '../composables/useChatSession'
 
 const locale = useLocaleStore()
 const { messages, sessionId, sendMessage: addMessage, touch } = useChatSession()
+
+onMounted(() => touch())
 
 const isOpen = ref(false)
 const inputValue = ref('')
@@ -213,28 +215,31 @@ async function handleSend() {
 
     const reader = response.body.getReader()
     const decoder = new TextDecoder()
+    let buffer = ''
 
     while (true) {
       const { done, value } = await reader.read()
       if (done) break
 
-      const chunk = decoder.decode(value, { stream: true })
-      for (const line of chunk.split('\n')) {
-        if (line.startsWith('data: ')) {
-          try {
-            const data = JSON.parse(line.slice(6))
-            if (data.done) break
-            if (data.content) {
-              const updated = [...messages.value]
-              updated[botMessageIndex] = {
-                ...updated[botMessageIndex],
-                content: updated[botMessageIndex].content + data.content,
-              }
-              messages.value = updated
+      buffer += decoder.decode(value, { stream: true })
+      const lines = buffer.split('\n')
+      buffer = lines.pop() || ''
+
+      for (const line of lines) {
+        if (!line || !line.startsWith('data: ')) continue
+        try {
+          const data = JSON.parse(line.slice(6))
+          if (data.done) break
+          if (data.content) {
+            const updated = [...messages.value]
+            updated[botMessageIndex] = {
+              ...updated[botMessageIndex],
+              content: updated[botMessageIndex].content + data.content,
             }
-          } catch {
-            // Skip malformed line
+            messages.value = updated
           }
+        } catch {
+          // Skip malformed line
         }
       }
     }
