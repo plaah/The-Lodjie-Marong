@@ -4,7 +4,9 @@
     "about": "About",
     "events": "Events",
     "contact": "Contact",
-    "enquire": "Enquire Now"
+    "enquire": "Enquire Now",
+    "toggleMenu": "Toggle menu",
+    "closeMenu": "Close menu"
   },
   "home": {
     "heroSubtitle": "Heritage Sanctuary • Wonosobo",
@@ -27,7 +29,6 @@
     "title": "A Sanctuary of Quiet Luxury",
     "story": "Founded on the principles of heritage and hospitality, The Lodjie Marong represents the architectural soul of Wonosobo. What began as a private family retreat has evolved into a premier destination for those seeking a wedding venue with historical weight and natural grace.",
     "quote": "We believe luxury is found in the whispers of history and the breath of the garden, not just the grandeur of the architecture.",
-    "historyCta": "Our Full History",
     "facilitiesTitle": "Our Facilities",
     "facilities": {
       "garden": {
@@ -124,7 +125,8 @@
       "title": "Contact Information",
       "phone": "Phone",
       "email": "Email",
-      "hours": "Working Hours"
+      "hours": "Working Hours",
+        "hoursValue": "Monday - Saturday: 09:00 - 17:00\nSunday by appointment"
     }
   },
   "footer": {
@@ -132,8 +134,7 @@
     "copyright": "© 2026 The Lodjie Marong. A Heritage Sanctuary in Wonosobo."
   },
   "common": {
-    "language": "ID",
-    "mapsCta": "Find Us on Google Maps"
+    "language": "ID"
   },
   "chat": {
     "title": "Lodjie Assistant",

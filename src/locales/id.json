@@ -4,7 +4,9 @@
     "about": "Tentang",
     "events": "Acara",
     "contact": "Kontak",
-    "enquire": "Pesan Sekarang"
+    "enquire": "Pesan Sekarang",
+    "toggleMenu": "Buka menu",
+    "closeMenu": "Tutup menu"
   },
   "home": {
     "heroSubtitle": "Warisan Sancktuary • Wonosobo",
@@ -27,7 +29,6 @@
     "title": "Sanctuary Kemewahan yang Tenang",
     "story": "Didirikan atas prinsip warisan dan keramahan, The Lodjie Marong mewakili jiwa arsitektur Wonosobo. Apa yang dimulai sebagai tempat peristirahatan keluarga pribadi telah berkembang menjadi tujuan utama bagi mereka yang mencari venue pernikahan dengan bobot sejarah dan keanggunan alami.",
     "quote": "Kami percaya kemewahan ditemukan dalam bisikan sejarah dan napas taman, bukan hanya kemegahan arsitektur.",
-    "historyCta": "Sejarah Lengkap Kami",
     "facilitiesTitle": "Fasilitas Kami",
     "facilities": {
       "garden": {
@@ -124,7 +125,8 @@
       "title": "Informasi Kontak",
       "phone": "Telepon",
       "email": "Email",
-      "hours": "Jam Kerja"
+      "hours": "Jam Kerja",
+        "hoursValue": "Senin - Sabtu: 09:00 - 17:00\nMinggu dengan perjanjian"
     }
   },
   "footer": {
@@ -132,8 +134,7 @@
     "copyright": "© 2026 The Lodjie Marong. Sanctuary Warisan di Wonosobo."
   },
   "common": {
-    "language": "EN",
-    "mapsCta": "Temukan di Google Maps"
+    "language": "EN"
   },
   "chat": {
     "title": "Asisten Lodjie",

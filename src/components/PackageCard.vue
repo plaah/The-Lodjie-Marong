@@ -7,7 +7,7 @@
       <li v-for="(feature, index) in features" :key="`${name}-${index}`">{{ feature }}</li>
     </ul>
     <div class="mt-8">
-      <WhatsAppButton :label="ctaText" />
+      <WhatsAppButton :label="ctaText" phone="6282223115231" />
     </div>
   </div>
 </template>

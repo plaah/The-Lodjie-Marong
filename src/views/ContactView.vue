@@ -26,7 +26,7 @@
                 </svg>
                 <div>
                   <p class="font-label text-label text-deep-forest uppercase">{{ locale.t.contact.contactInfo.phone }}</p>
-                  <p class="text-body font-light">+62 812-3456-7890</p>
+                  <p class="text-body font-light">+62 822-2311-5231</p>
                 </div>
               </div>
               <div class="flex items-start gap-4">
@@ -44,7 +44,7 @@
                 </svg>
                 <div>
                   <p class="font-label text-label text-deep-forest uppercase">{{ locale.t.contact.contactInfo.hours }}</p>
-                  <p class="text-body font-light whitespace-pre-line">{{ locale.t.contact.contactInfo.hours }}</p>
+                  <p class="text-body font-light whitespace-pre-line">{{ locale.t.contact.contactInfo.hoursValue }}</p>
                 </div>
               </div>
             </div>
