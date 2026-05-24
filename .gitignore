@@ -6,3 +6,4 @@ docs/
 .vercel/
 .claude/
 AGENTS.md
+opencode.json
